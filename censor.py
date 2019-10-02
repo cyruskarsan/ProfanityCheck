@@ -74,8 +74,6 @@ def check(input, badWords):
                 count = count+1
 
         #using our list of words for as a check for profanity (can probably be put in a different function)
-        # if("fart" in badWords):
-        #     print("found")
         for i in range(len(badWords)):
             ourFlag = False
             if(badWords[i] in element['name'].lower()):
