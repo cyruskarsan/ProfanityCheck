@@ -21,9 +21,13 @@ python3 sym.py
 ```
 This will start the server for the API
 
-Now, you must add profane words to the database. To do this, send a POST request with the endpoint /explict. The parameters should be id, which is an int, and word which is a string.
+Now, you must add profane words to the database. To do this, send a POST request with the endpoint /explict. 
+The header should be a multi-part form with the following parameters:
+- id (as an int)
+- word (as a string)
 
-To run the profanity checker, send a POST request with the respective json input using the endpoint /send
+To run the profanity checker, send a POST request using the endpoint /send with the json input in the header
+See demo.json for example json input
 
 Files:
 - sym.py- sets up the API environment and begins the testing server. Calls censor.py
